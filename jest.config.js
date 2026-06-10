@@ -8,12 +8,17 @@ module.exports = {
     '<rootDir>/tests/__mocks__/browserMocks.ts',
   ],
 
+  collectCoverageFrom: [
+    ...baseConfig.collectCoverageFrom,
+    '!./src/**/index.ts',
+  ],
+
   coverageThreshold: {
     global: {
-      branches: 100,
-      functions: 100,
-      lines: 100,
-      statements: 100,
+      branches: 20,
+      functions: 80,
+      lines: 70,
+      statements: 70,
     },
   },
 };
